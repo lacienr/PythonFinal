@@ -65,8 +65,11 @@ def play_game():
             if get_hand_value(dealer_hand) > 21:
                 print("Dealer busted! WINNER!")
                 return
-            elif get_hand_value(dealer_hand) >= get_hand_value(player_hand):
+            elif get_hand_value(dealer_hand) > get_hand_value(player_hand):
                 print("Dealer wins!")
+                return
+            elif get_hand_value(dealer_hand) == get_hand_value(player_hand):
+                print("Push! Try again!")
                 return
             else:
                 print("WINNER!")
